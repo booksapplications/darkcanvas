@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dark Canvas | Blue Edition Alpha</title>
+    <title>Dark Canvas | Creative Hobbyist</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #020617; color: #f8fafc; }
@@ -14,65 +14,68 @@
         }
         .premium-card:hover { 
             border-color: #0ea5e9;
-            box-shadow: 0 0 30px rgba(14, 165, 233, 0.15);
-            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 0 30px rgba(14, 165, 233, 0.2);
+            transform: translateY(-8px);
         }
-        .alpha-badge {
-            background: linear-gradient(90deg, #0ea5e9, #2563eb);
-            box-shadow: 0 0 15px rgba(14, 165, 233, 0.5);
-        }
+        .badge { font-size: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 10px; border-radius: 6px; }
     </style>
 </head>
 <body class="font-sans selection:bg-sky-500">
 
-    <header class="max-w-6xl mx-auto px-6 py-24 text-center">
-        <h1 class="text-7xl font-black tracking-tighter mb-4 italic">
+    <header class="max-w-6xl mx-auto px-6 py-20 text-center">
+        <h1 class="text-6xl md:text-8xl font-black tracking-tighter mb-4 italic italic">
             DARK <span class="text-sky-500 tracking-normal">CANVAS</span>
         </h1>
-        <div class="h-1 w-24 bg-sky-500 mx-auto mb-6 rounded-full"></div>
-        <p class="text-gray-400 text-xl font-light tracking-wide uppercase">Minecraft Studio & Design</p>
+        <p class="text-gray-400 text-lg md:text-xl font-light tracking-wide italic">
+            "Wo Pixel auf Leidenschaft treffen – Meine Minecraft-Projekte."
+        </p>
+        <p class="text-gray-600 text-sm mt-2">Ein Hobby-Projekt von Dark Canvas</p>
     </header>
 
     <main class="max-w-4xl mx-auto px-6 pb-32">
-        <h2 class="text-sm font-bold text-sky-500 mb-8 uppercase tracking-[0.3em]">Aktuelle Projekte</h2>
-        
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div class="grid grid-cols-1 gap-12">
             
-            <div class="premium-card rounded-[2rem] overflow-hidden shadow-2xl relative group">
-                <div class="absolute top-5 left-5 z-10 alpha-badge text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-widest">
-                    Alpha v0.1
+            <div class="premium-card rounded-[2.5rem] overflow-hidden shadow-2xl group">
+                
+                <div class="absolute top-6 left-6 right-6 z-10 flex justify-between items-center">
+                    <span class="badge bg-white text-black">Texture Pack</span>
+                    <div class="flex gap-2">
+                        <span class="badge bg-sky-500 text-white shadow-[0_0_10px_rgba(14,165,233,0.5)]">Alpha v0.1</span>
+                        <span class="badge bg-slate-700 text-gray-300 border border-white/10">1.21.1</span>
+                    </div>
                 </div>
 
-                <div class="h-56 bg-slate-800 overflow-hidden">
+                <div class="h-64 bg-slate-800 overflow-hidden relative">
                     <img src="https://via.placeholder.com/800x600/0ea5e9/ffffff?text=Blue+Edition+Preview" 
-                         alt="Blue Edition" 
-                         class="object-cover w-full h-full group-hover:scale-110 transition-transform duration-700 opacity-80">
+                         class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500 opacity-70">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] to-transparent"></div>
                 </div>
 
-                <div class="p-8">
-                    <h3 class="text-3xl font-bold mb-2">Blue Edition</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-8">
-                        Die erste Iteration von Dark Canvas. Einzigartige Blautöne, minimalistische Texturen und optimiertes UI für die Version 1.20+.
+                <div class="p-10 -mt-12 relative z-20">
+                    <h3 class="text-4xl font-bold mb-3 text-white">Blue Edition</h3>
+                    <p class="text-gray-300 text-base leading-relaxed mb-8 max-w-xl">
+                        Meine aktuelle Vision für Minecraft 1.21.1: Eine Welt, die komplett in kühlen Blautönen erstrahlt. Von den Blöcken bis zum UI – alles wird blau, clean und modern.
                     </p>
                     
-                    <a href="blue-edition/index.html" 
-                       class="block text-center bg-white hover:bg-sky-500 text-black hover:text-white font-black py-4 rounded-2xl transition-all duration-300 uppercase tracking-widest text-sm shadow-xl">
-                        Details & Download
-                    </a>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="blue-edition/index.html" 
+                           class="flex-1 text-center bg-sky-500 hover:bg-sky-400 text-white font-black py-4 rounded-2xl transition-all shadow-lg uppercase tracking-widest text-sm">
+                            Details & Screenshots
+                        </a>
+                        <a href="DEIN_SWISSTRANSFER_LINK" 
+                           class="sm:w-1/3 text-center border border-white/10 hover:border-white/40 text-gray-400 hover:text-white py-4 rounded-2xl transition-all text-sm font-bold uppercase tracking-widest">
+                            Direkt-DL
+                        </a>
+                    </div>
                 </div>
-            </div>
-
-            <div class="border-2 border-dashed border-white/5 rounded-[2rem] flex flex-col items-center justify-center p-10 opacity-40">
-                <div class="w-12 h-12 border-2 border-white/20 rounded-full flex items-center justify-center mb-4 italic font-serif">?</div>
-                <p class="text-sm tracking-widest uppercase text-gray-500">Next Project Loading...</p>
             </div>
 
         </div>
     </main>
 
-    <footer class="py-12 border-t border-white/5 text-center">
-        <p class="text-gray-600 text-xs tracking-[0.2em] uppercase">
-            &copy; 2026 Dark Canvas &bull; Developed by BooksApplications
+    <footer class="py-12 text-center border-t border-white/5">
+        <p class="text-gray-600 text-[10px] uppercase tracking-[0.4em]">
+            Leidenschaftlich gestaltet für die Minecraft Community
         </p>
     </footer>
 
