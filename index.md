@@ -3,46 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minecraft Creations | Premium</title>
+    <title>Projekt Details</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         body { background-color: #0f172a; color: white; }
-        .card { background: #1e293b; border-radius: 15px; transition: transform 0.2s; }
-        .card:hover { transform: translateY(-5px); border: 1px solid #38bdf8; }
+        .glass { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1); }
     </style>
 </head>
-<body class="font-sans">
+<body class="p-5">
+    <div class="max-w-3xl mx-auto">
+        <a href="../index.html" class="text-sky-400 hover:underline">← Zurück zur Übersicht</a>
 
-    <header class="py-10 text-center">
-        <h1 class="text-4xl font-bold text-sky-400">Meine Minecraft Welten</h1>
-        <p class="text-gray-400 mt-2">Premium Texturepacks & Maps</p>
-    </header>
+        <div class="glass p-8 mt-6">
+            <h1 class="text-3xl font-bold mb-4">Name des Packs/der Welt</h1>
+            
+            <img src="https://via.placeholder.com/800x450" class="rounded-xl w-full mb-6 border-2 border-sky-500/30">
 
-    <main class="max-w-4xl mx-auto px-4 grid gap-8 md:grid-cols-2">
-        
-        <div class="card p-5 shadow-xl">
-            <img src="https://via.placeholder.com/400x225" alt="Minecraft Screenshot" class="rounded-lg mb-4 w-full">
-            <h2 class="text-xl font-semibold">Texturepack Name</h2>
-            <p class="text-gray-400 text-sm mt-2 mb-4">Ein kurzes Highlight-Feature hier einfügen.</p>
-            <a href="DEIN_SWISSTRANSFER_LINK" class="block text-center bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-lg transition">
-                Download via SwissTransfer
-            </a>
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <img src="https://via.placeholder.com/400x225" class="rounded-lg">
+                <img src="https://via.placeholder.com/400x225" class="rounded-lg">
+            </div>
+
+            <h3 class="text-xl text-sky-300 mb-2">Beschreibung</h3>
+            <p class="text-gray-300 leading-relaxed mb-8">
+                Hier kannst du alles erklären: Welche Version? Was ist neu? Warum ist es besonders?
+            </p>
+
+            <div class="bg-sky-900/30 p-6 rounded-xl border border-sky-500/50 text-center">
+                <p class="mb-4 font-semibold">Bereit zum Spielen?</p>
+                <a href="DEIN_SWISSTRANSFER_LINK" class="inline-block bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105">
+                    Download via SwissTransfer
+                </a>
+            </div>
         </div>
-
-        <div class="card p-5 shadow-xl">
-            <img src="https://via.placeholder.com/400x225" alt="Minecraft Welt" class="rounded-lg mb-4 w-full">
-            <h2 class="text-xl font-semibold">Survival Welt V1</h2>
-            <p class="text-gray-400 text-sm mt-2 mb-4">Beschreibe kurz, was diese Welt besonders macht.</p>
-            <a href="DEIN_SWISSTRANSFER_LINK" class="block text-center bg-sky-500 hover:bg-sky-600 text-white font-bold py-2 px-4 rounded-lg transition">
-                Download via SwissTransfer
-            </a>
-        </div>
-
-    </main>
-
-    <footer class="py-10 text-center text-gray-500 text-xs">
-        &copy; 2026 Erstellt mit GitHub Pages
-    </footer>
-
+    </div>
 </body>
 </html>
