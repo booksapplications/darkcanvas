@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Dark PiVault // Detailed Report</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap');
+        body { background-color: #020617; color: #f8fafc; font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="p-10 md:p-32">
+    <nav class="mb-20 uppercase text-[10px] tracking-[0.5em] font-bold">
+        <a href="/core" class="text-sky-500">← Return to CORE. Hub</a>
+    </nav>
+
+    <h1 class="text-7xl font-bold italic uppercase mb-8">DARK <span class="text-sky-500">PIVAULT</span></h1>
+    
+    <div class="grid md:grid-cols-3 gap-12">
+        <div class="md:col-span-2 space-y-12 text-gray-400 text-lg">
+            <section>
+                <h2 class="text-white text-2xl font-bold mb-4 uppercase">Die Vision</h2>
+                <p><strong>Dark PiVault</strong> wurde entwickelt, um die Lücke zwischen mobiler Datenverfügbarkeit und maximaler Sicherheit zu schließen. Herkömmliche Cloud-Speicher erfordern Vertrauen in Drittanbieter. PiVault erfordert nur Vertrauen in deinen eigenen Code und deine eigene Hardware.</p>
+            </section>
+
+            <section>
+                <h2 class="text-white text-2xl font-bold mb-4 uppercase">Der RAM-Only Ansatz</h2>
+                <p>Ein entscheidender Sicherheitsaspekt von PiVault ist die flüchtige Speicherung. Während des Verschlüsselungsvorgangs werden keine Daten auf der SD-Karte des Raspberry Pi zwischengelagert. Alles geschieht in Echtzeit innerhalb des 8GB LPDDR4X Arbeitsspeichers. Sobald der Strom unterbrochen wird, existieren keine Spuren der unverarbeiteten Daten mehr.</p>
+            </section>
+
+            <section class="bg-sky-500/10 p-10 rounded-[3rem] border border-sky-500/20 text-sky-400">
+                <h2 class="text-white text-xl font-bold mb-4 uppercase tracking-widest">Core. Security Specs</h2>
+                <ul class="space-y-4 font-mono text-sm">
+                    <li>> Algorithm: AES-256-GCM (Authenticated Encryption)</li>
+                    <li>> Key Derivation: PBKDF2 with SHA-256</li>
+                    <li>> Protocol: Stateless Flask-REST API</li>
+                    <li>> Transfer: Chunked Data-Streaming via Requests-Toolbelt</li>
+                </ul>
+            </section>
+        </div>
+
+        <aside class="space-y-8">
+            <div class="bg-slate-900 p-8 rounded-3xl">
+                <h4 class="text-white font-bold mb-4 uppercase text-xs">Ressourcen</h4>
+                <div class="flex flex-col gap-4 text-[10px] uppercase font-bold tracking-widest">
+                    <a href="https://github.com/booksapplications/pivault" class="text-sky-500 hover:text-white">GitHub Repository</a>
+                    <a href="#" class="text-gray-500">API Documentation</a>
+                    <a href="#" class="text-gray-500">Hardware Guide</a>
+                </div>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
