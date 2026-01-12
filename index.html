@@ -2,107 +2,44 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DARK CANVAS | BooksApplications</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@900&family=Space+Grotesk:wght@300;700&display=swap');
-        
-        body, html { 
-            background-color: #020617; 
-            color: #f8fafc; 
-            font-family: 'Space Grotesk', sans-serif;
-            scroll-behavior: smooth;
-        }
-
-        .hero-text {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(3rem, 15vw, 12rem);
-            line-height: 0.8;
-            letter-spacing: -0.05em;
-        }
-
-        .glass-card {
-            background: rgba(15, 23, 42, 0.6);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .glass-card:hover {
-            border-color: #0ea5e9;
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.1);
-        }
-
-        .bg-gradient-mesh {
-            background: radial-gradient(circle at 50% 50%, rgba(14, 165, 233, 0.1) 0%, transparent 50%);
-        }
+        body { background-color: #020617; color: #f8fafc; font-family: 'Space Grotesk', sans-serif; overflow: hidden; }
+        .hero-title { font-family: 'Inter', sans-serif; font-size: 12vw; line-height: 0.8; letter-spacing: -0.06em; }
+        .nav-link { font-size: 10px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4em; color: #475569; transition: all 0.3s; }
+        .nav-link:hover { color: #0ea5e9; }
     </style>
 </head>
-<body class="bg-gradient-mesh">
+<body class="h-screen flex flex-col justify-between p-12">
 
-    <nav class="fixed top-0 w-full p-8 flex justify-between items-center z-50 mix-blend-difference">
-        <div class="font-black italic text-xl tracking-tighter">DARK CANVAS<span class="text-sky-500">.</span></div>
-        <div class="flex gap-8 text-[10px] uppercase font-bold tracking-[0.3em]">
-            <a href="#projects" class="hover:text-sky-500 transition-all">Projekte</a>
-            <a href="#about" class="hover:text-sky-500 transition-all">Über Uns</a>
-            <a href="/pivault" class="text-sky-500">CORE. Unit</a>
+    <nav class="flex justify-between items-center">
+        <div class="font-black italic text-2xl">DARK CANVAS<span class="text-sky-500">.</span></div>
+        <div class="flex gap-12">
+            <a href="/darkcanvas/units.html" class="nav-link">What is a Unit?</a>
+            <a href="https://booksapplications.github.io/darkcanvas" class="nav-link">Main Port</a>
         </div>
     </nav>
 
-    <section class="h-screen flex flex-col items-center justify-center text-center p-6">
-        <p class="text-sky-500 text-[10px] uppercase tracking-[0.8em] mb-8 animate-pulse">Willkommen im Universum</p>
-        <h1 class="hero-text italic uppercase font-black mb-8">DARK<br><span class="text-sky-500">CANVAS</span></h1>
-        <p class="text-gray-500 max-w-lg mx-auto italic text-lg font-light leading-relaxed">
-            Eine Symbiose aus digitaler Kunst, technischer Präzision und funktionaler Sicherheit.
-        </p>
-        <a href="#projects" class="mt-12 w-12 h-12 flex items-center justify-center border border-white/10 rounded-full hover:border-sky-500 transition-all">
-            <svg class="w-4 h-4 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M19 14l-7 7-7-7"></path></svg>
-        </a>
-    </section>
-
-    <section id="projects" class="max-w-7xl mx-auto px-6 py-32">
-        <div class="mb-20">
-            <h2 class="text-4xl font-black italic tracking-tighter uppercase mb-2">Die <span class="text-sky-500 text-6xl">CORE.</span> Unit</h2>
-            <p class="text-gray-500 uppercase tracking-widest text-[10px] font-bold">Fokus Quartal Q1 2026</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8">
-            <a href="/pivault" class="glass-card rounded-[3rem] p-12 group">
-                <div class="flex justify-between items-start mb-20">
-                    <span class="px-4 py-1 rounded-full bg-sky-500 text-white text-[9px] font-black uppercase tracking-widest">Active System</span>
-                    <span class="text-gray-700 font-black text-4xl italic group-hover:text-sky-500 transition-all">01</span>
-                </div>
-                <h3 class="text-5xl font-black italic mb-4">DARK PIVAULT</h3>
-                <p class="text-gray-500 font-light leading-relaxed mb-8">
-                    Hochsichere RAM-Verschlüsselung auf Basis von Raspberry Pi 5. Das Herzstück der CORE. Unterfamilie.
-                </p>
-                <div class="text-sky-500 text-[10px] font-black uppercase tracking-widest">System öffnen →</div>
+    <main class="text-center">
+        <p class="text-sky-500 text-[10px] font-black uppercase tracking-[1em] mb-8 animate-pulse">Projektfamilie Q1 2026</p>
+        <h1 class="hero-title italic font-black uppercase mb-12">DARK<br><span class="text-sky-500">CANVAS</span></h1>
+        
+        <div class="flex justify-center gap-4">
+            <a href="/core/index.html" class="bg-white/5 border border-white/10 px-12 py-5 rounded-2xl group hover:border-sky-500 transition-all">
+                <span class="text-[10px] font-black uppercase tracking-[0.3em] text-gray-500 group-hover:text-sky-500">Active Unit</span>
+                <h2 class="text-3xl font-bold italic text-white uppercase mt-1">CORE<span class="text-sky-500">.</span></h2>
             </a>
-
-            <div class="glass-card rounded-[3rem] p-12 opacity-50 flex flex-col justify-center items-center border-dashed">
-                <p class="text-gray-700 text-[10px] uppercase font-black tracking-[0.5em]">Upcoming Project</p>
-            </div>
         </div>
-    </section>
+    </main>
 
-    <section id="about" class="py-32 bg-[#010409]">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-sky-500 text-[10px] uppercase tracking-[0.5em] mb-12">Philosophie</h2>
-            <p class="text-3xl font-light leading-snug mb-12 italic">
-                "Dark Canvas ist mehr als eine Sammlung von Skripten und Maps. Es ist der Versuch, digitale Ästhetik mit kompromissloser Funktionalität zu verbinden."
-            </p>
-            <p class="text-gray-600 text-sm">
-                Entwickelt von <a href="https://booksapplications.github.io/darkcanvas" class="text-white hover:text-sky-500">BooksApplications</a>
-            </p>
+    <footer class="flex justify-between items-end">
+        <div class="max-w-xs text-[10px] text-gray-600 uppercase tracking-widest leading-relaxed">
+            Sicherheit trifft Design. Ein Projekt von <br>
+            <span class="text-gray-400">BooksApplications</span>
         </div>
-    </section>
-
-    <footer class="p-20 text-center border-t border-white/5">
-        <p class="text-[9px] uppercase tracking-[0.5em] text-gray-800">
-            &copy; 2026 Dark Canvas Projektfamilie // Alle Rechte vorbehalten.
-        </p>
+        <div class="text-[9px] text-gray-800 uppercase tracking-[0.5em]">© 2026 // Archive Unit</div>
     </footer>
 
 </body>
