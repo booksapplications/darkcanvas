@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>CORE. // Dark Canvas Unit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap');
+        body { background-color: #020617; color: #f8fafc; font-family: 'Space Grotesk', sans-serif; overflow-x: hidden; }
+        .core-header { font-size: 15vw; line-height: 0.8; font-weight: 700; letter-spacing: -0.05em; }
+        .project-stripe { border-left: 1px solid rgba(14, 165, 233, 0.3); transition: all 0.4s; }
+        .project-stripe:hover { border-left: 4px solid #0ea5e9; background: rgba(14, 165, 233, 0.02); }
+    </style>
+</head>
+<body class="p-10 md:p-20">
+    <nav class="mb-32 flex justify-between items-center uppercase text-[10px] tracking-[0.5em] font-bold">
+        <a href="/" class="text-gray-500 hover:text-white">← Dark Canvas</a>
+        <span class="text-sky-500 underline underline-offset-8">Unit: CORE.</span>
+    </nav>
+
+    <main>
+        <div class="mb-32">
+            <h1 class="core-header italic uppercase">CORE<span class="text-sky-500">.</span></h1>
+            <p class="text-gray-500 text-xl max-w-2xl mt-8 italic">
+                Die technische Unterfamilie der Dark Canvas Projektfamilie. Fokus: Python-Backends, Automatisierung und Sicherheit.
+            </p>
+        </div>
+
+        <div class="space-y-12">
+            <a href="/pivault" class="block project-stripe p-10 group">
+                <div class="text-sky-500 text-[10px] font-black mb-2 tracking-[0.3em]">PROJECT 01</div>
+                <h2 class="text-5xl font-bold italic group-hover:translate-x-4 transition-transform uppercase">Dark PiVault</h2>
+                <p class="text-gray-600 mt-4 max-w-xl">Lokale RAM-Verschlüsselungs-Engine für Raspberry Pi. Sicherer Datentransfer in das Dark Canvas Ökosystem.</p>
+            </a>
+
+            <div class="project-stripe p-10 opacity-20">
+                <div class="text-gray-700 text-[10px] font-black mb-2 tracking-[0.3em]">PROJECT 02</div>
+                <h2 class="text-5xl font-bold italic uppercase text-gray-800">In Development</h2>
+            </div>
+        </div>
+    </main>
+
+    <footer class="mt-40 pt-10 border-t border-white/5 text-[9px] uppercase tracking-[0.5em] text-gray-700">
+        &copy; 2026 BooksApplications // CORE. Technical Systems
+    </footer>
+</body>
+</html>
