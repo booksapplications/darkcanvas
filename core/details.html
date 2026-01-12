@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>CORE. Details // Dark Canvas Unit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;700&display=swap');
+        body { background-color: #020617; color: #f8fafc; font-family: 'Space Grotesk', sans-serif; }
+        .spec-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+    </style>
+</head>
+<body class="p-10 md:p-32">
+    <nav class="mb-20 uppercase text-[10px] tracking-[0.5em] font-bold">
+        <a href="/units" class="text-gray-500 hover:text-white">← Back to Units</a>
+    </nav>
+
+    <h1 class="text-7xl font-bold italic uppercase mb-4">Unit <span class="text-sky-500">CORE.</span></h1>
+    <p class="text-gray-500 text-xl mb-20 italic">"The Foundation of all Dark Canvas Operations."</p>
+
+    <div class="space-y-24">
+        <section>
+            <h2 class="text-sky-500 text-xs font-bold uppercase tracking-[0.4em] mb-8">Zielsetzung & Mission</h2>
+            <div class="grid md:grid-cols-2 gap-12 text-gray-400 leading-relaxed">
+                <p>Das Ziel der Unit <strong>CORE.</strong> ist die Schaffung einer autarken, sicheren und hochperformanten technischen Basis. In dieser Unit werden Werkzeuge entwickelt, die den Datenaustausch innerhalb der Projektfamilie schützen und automatisieren. <strong>CORE.</strong> ist nicht für das Auge gedacht, sondern für die Substanz.</p>
+                <p>Wir konzentrieren uns auf Python-Backend-Systeme, API-Strukturen und die Hardware-Integration (Raspberry Pi 5). <strong>CORE.</strong> bildet die Brücke zwischen deiner lokalen Hardware und der digitalen Präsenz von Dark Canvas.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-sky-500 text-xs font-bold uppercase tracking-[0.4em] mb-8">Technische Spezifikationen</h2>
+            <div class="spec-grid">
+                <div class="bg-slate-900/50 p-8 rounded-3xl border border-white/5">
+                    <h4 class="text-white font-bold mb-2 uppercase text-sm">Primary Language</h4>
+                    <p class="text-sky-500 font-bold text-2xl">Python 3.12+</p>
+                </div>
+                <div class="bg-slate-900/50 p-8 rounded-3xl border border-white/5">
+                    <h4 class="text-white font-bold mb-2 uppercase text-sm">Security Layer</h4>
+                    <p class="text-sky-500 font-bold text-2xl">AES-256-GCM</p>
+                </div>
+                <div class="bg-slate-900/50 p-8 rounded-3xl border border-white/5">
+                    <h4 class="text-white font-bold mb-2 uppercase text-sm">Design Palette</h4>
+                    <p class="text-sky-500 font-bold text-2xl">#020617 | #0EA5E9</p>
+                </div>
+                <div class="bg-slate-900/50 p-8 rounded-3xl border border-white/5">
+                    <h4 class="text-white font-bold mb-2 uppercase text-sm">Hardware Node</h4>
+                    <p class="text-sky-500 font-bold text-2xl">RPi 5 / 8GB</p>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
