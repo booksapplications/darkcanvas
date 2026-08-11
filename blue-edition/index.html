@@ -6,47 +6,61 @@
     <title>Blue Edition | Details</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body { background-color: #020617; color: #f8fafc; }
+        body { background-color: #020617; color: #f8fafc; font-family: ui-sans-serif, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
         .glass-panel { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.05); }
         .feature-item { border-left: 3px solid #0ea5e9; padding-left: 1rem; }
+
+        /* Blur & Popup Styles (Exakt wie bei der Referenzseite) */
+        #content-wrapper {
+            transition: filter 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .is-blurred {
+            filter: blur(12px);
+            pointer-events: none;
+        }
+        
+        #status-popup {
+            position: fixed;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 9999;
+            padding: 20px;
+        }
+        #status-popup.visible {
+            opacity: 1;
+            pointer-events: auto;
+        }
+        .popup-content {
+            background: #020617;
+            color: #f8fafc;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 40px;
+            border-radius: 24px;
+            max-width: 550px;
+            width: 100%;
+            text-align: left;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            position: relative;
+            transform: scale(0.95);
+            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #status-popup.visible .popup-content {
+            transform: scale(1);
+        }
     </style>
 </head>
-<body class="font-sans selection:bg-sky-500 min-h-screen flex flex-col justify-between relative">
+<body class="selection:bg-sky-500">
 
-    <!-- ECHTES MODAL POPUP -->
-    <div id="archive-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
-        <div class="bg-slate-900 border border-sky-500/30 p-8 rounded-[2.5rem] max-w-xl w-full shadow-2xl relative space-y-6">
-            
-            <div class="space-y-2">
-                <span class="bg-sky-500/10 text-sky-400 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block border border-sky-500/20">Archiviertes Projekt</span>
-                <h2 class="text-2xl font-black uppercase text-white">Hinweis zur Seite</h2>
-            </div>
-
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
-                <!-- Linkes Element: Status -->
-                <div class="bg-black/40 p-4 rounded-2xl border border-white/5 space-y-2">
-                    <p class="text-sky-300 font-bold uppercase tracking-wider">Vergangenheit</p>
-                    <p class="text-gray-400 leading-relaxed">
-                        Dieses Projekt gehört zu meiner <a href="https://projectzwim.github.io/home/about" class="text-sky-400 underline underline-offset-2 hover:text-sky-300 font-bold">Vergangenheit vor ProjectZWiM</a> und wurde abgeschlossen.
-                    </p>
-                </div>
-
-                <!-- Rechtes Element: Pflege & Links -->
-                <div class="bg-black/40 p-4 rounded-2xl border border-white/5 space-y-2">
-                    <p class="text-sky-300 font-bold uppercase tracking-wider">Nicht mehr aktiv</p>
-                    <p class="text-gray-400 leading-relaxed">
-                        Die Seite wird nicht mehr gepflegt. Der Download-Link wird nicht aktuell gehalten, und eingebundene Bilder werden mit der Zeit ungültig.
-                    </p>
-                </div>
-            </div>
-
-            <button onclick="document.getElementById('archive-modal').style.display='none'" class="w-full bg-sky-500 hover:bg-sky-400 text-black font-black uppercase tracking-widest text-xs py-4 rounded-2xl transition-all cursor-pointer">
-                Verstanden & Schließen
-            </button>
-        </div>
-    </div>
-
-    <div>
+    <!-- CONTENT WRAPPER -->
+    <div id="content-wrapper">
         <nav class="max-w-5xl mx-auto px-6 py-8">
             <a href="../index.html" class="text-sky-500 hover:text-sky-400 font-bold flex items-center gap-2 transition-all">
                 <span class="text-2xl">←</span> Zurück zur Übersicht
@@ -99,10 +113,54 @@
         </main>
     </div>
 
-    <footer class="max-w-5xl mx-auto w-full px-6 py-8 border-t border-white/5 text-[10px] text-zinc-600 uppercase tracking-widest flex justify-between">
-        <div>Blue Edition // Archiv</div>
-        <div>© 2026</div>
-    </footer>
+    <!-- POP-UP -->
+    <div id="status-popup">
+        <div class="popup-content">
+            
+            <div style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #0ea5e9; font-size: 9px; font-weight: 900; text-transform: uppercase; letter-spacing: 0.4em; padding: 6px 16px; border-radius: 9999px; color: #000000; box-shadow: 0 4px 12px rgba(0,0,0,0.3);">
+                Eingestellt & Archiviert
+            </div>
+            
+            <div style="margin-top: 10px; margin-bottom: 24px; text-align: center;">
+                <h3 style="font-size: 24px; font-weight: 900; font-style: italic; text-transform: uppercase; margin: 0 0 8px 0; color: #ffffff;">Projekt beendet 📉</h3>
+                <p style="font-size: 11px; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.1em; margin: 0;">Zeit für ehrliche Worte.</p>
+            </div>
+
+            <!-- Informationsblöcke -->
+            <div style="display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; font-size: 12px; color: #cbd5e1;">
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 16px; border-radius: 16px;">
+                    <p style="font-weight: 700; color: #ffffff; margin: 0 0 6px 0; text-transform: uppercase; letter-spacing: 0.05em;">💭 Warum gibt es das nicht mehr?</p>
+                    <p style="color: #94a3b8; margin: 0; line-height: 1.6;">Ganz ehrlich: Irgendwann war die Luft raus und die Motivation weg. Das Projekt ist in Vergessenheit geraten, weil es am Ende einfach nicht das verkörpert hat, was ich ursprünglich erreichen wollte – es war schlicht nicht persönlich genug.</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 16px; border-radius: 16px;">
+                    <p style="font-weight: 700; color: #ffffff; margin: 0 0 6px 0; text-transform: uppercase; letter-spacing: 0.05em;">⚠️ Hinweise zur Seite</p>
+                    <p style="color: #94a3b8; margin: 0; line-height: 1.6;">Diese Seite bleibt zwar erreichbar, wird aber nicht mehr gepflegt. Aus diesem Grund wird der Download-Link nicht mehr aktuell gehalten, und auch die Bilder können mit der Zeit ungültig werden, da diese Links nicht mehr aktualisiert werden.</p>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); padding: 16px; border-radius: 16px;">
+                    <p style="font-weight: 700; color: #ffffff; margin: 0 0 6px 0; text-transform: uppercase; letter-spacing: 0.05em;">🚀 Der Neuanfang</p>
+                    <p style="color: #94a3b8; margin: 0; line-height: 1.6;">Genau aus diesem Grund zieht das Ganze jetzt zu <span style="color: #38bdf8; font-weight: 700;">projectzwim</span> um. Besser, persönlicher und mit Projekten, hinter denen man wirklich steht.</p>
+                </div>
+            </div>
+            
+            <div style="display: flex; gap: 12px; flex-direction: column;">
+                <button onclick="document.getElementById('status-popup').classList.remove('visible'); document.getElementById('content-wrapper').classList.remove('is-blurred');" style="display: block; width: 100%; text-align: center; background: rgba(255,255,255,0.1); color: #ffffff; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.2em; padding: 12px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.2); cursor: pointer; transition: background 0.3s;">
+                    Popup schließen ✕
+                </button>
+                <a href="https://projectzwim.github.io/home" style="display: block; width: 100%; text-align: center; background: #0ea5e9; color: #000000; font-weight: 900; font-size: 11px; text-transform: uppercase; letter-spacing: 0.3em; padding: 16px; border-radius: 12px; transition: filter 0.3s; box-shadow: 0 10px 25px -5px rgba(14, 165, 233, 0.4);">
+                    Ab zu projectzwim ➔
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        setTimeout(() => {
+            document.getElementById('content-wrapper').classList.add('is-blurred');
+            document.getElementById('status-popup').classList.add('visible');
+        }, 1000);
+    </script>
 
 </body>
 </html>
