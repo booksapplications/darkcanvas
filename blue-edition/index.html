@@ -11,31 +11,38 @@
         .feature-item { border-left: 3px solid #0ea5e9; padding-left: 1rem; }
     </style>
 </head>
-<body class="font-sans selection:bg-sky-500 min-h-screen flex flex-col justify-between">
+<body class="font-sans selection:bg-sky-500 min-h-screen flex flex-col justify-between relative">
 
-    <!-- PROJEKT BEENDET POPUP -->
-    <div id="archive-banner" class="bg-sky-950/80 border-b border-sky-500/20 px-6 py-4 backdrop-blur-md sticky top-0 z-50 transition-all">
-        <div class="max-w-5xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+    <!-- ECHTES MODAL POPUP -->
+    <div id="archive-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+        <div class="bg-slate-900 border border-sky-500/30 p-8 rounded-[2.5rem] max-w-xl w-full shadow-2xl relative space-y-6">
             
-            <!-- Linke Seite: Hauptinfo -->
-            <div class="flex items-start gap-3">
-                <span class="bg-sky-500 text-black text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider mt-0.5 shrink-0">Archiviert</span>
-                <p class="text-xs text-sky-200/90 leading-relaxed">
-                    Dieses Projekt wurde abgeschlossen und gehört zu meiner <a href="https://projectzwim.github.io/home/about" class="text-sky-400 font-bold underline underline-offset-2 hover:text-sky-300">Vergangenheit vor ProjectZWiM</a>.
-                </p>
+            <div class="space-y-2">
+                <span class="bg-sky-500/10 text-sky-400 text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block border border-sky-500/20">Archiviertes Projekt</span>
+                <h2 class="text-2xl font-black uppercase text-white">Hinweis zur Seite</h2>
             </div>
 
-            <!-- Rechte Seite: Zusätzliche Hinweise + Schließen-Button -->
-            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full lg:w-auto">
-                <div class="bg-black/30 border border-white/5 px-4 py-2 rounded-xl text-[11px] text-gray-300 max-w-md">
-                    <span class="text-sky-400 font-bold">Hinweis:</span> Die Seite bleibt erreichbar, wird aber nicht mehr gepflegt. Der Download-Link kann veraltet sein, und eingebundene Bilder werden mit der Zeit ungültig.
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs">
+                <!-- Linkes Element: Status -->
+                <div class="bg-black/40 p-4 rounded-2xl border border-white/5 space-y-2">
+                    <p class="text-sky-300 font-bold uppercase tracking-wider">Vergangenheit</p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Dieses Projekt gehört zu meiner <a href="https://projectzwim.github.io/home/about" class="text-sky-400 underline underline-offset-2 hover:text-sky-300 font-bold">Vergangenheit vor ProjectZWiM</a> und wurde abgeschlossen.
+                    </p>
                 </div>
-                
-                <button onclick="document.getElementById('archive-banner').style.display='none'" class="bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/30 text-sky-300 text-[10px] font-bold px-3 py-2 rounded-xl transition-all uppercase tracking-wider shrink-0 cursor-pointer">
-                    Verstanden ✕
-                </button>
+
+                <!-- Rechtes Element: Pflege & Links -->
+                <div class="bg-black/40 p-4 rounded-2xl border border-white/5 space-y-2">
+                    <p class="text-sky-300 font-bold uppercase tracking-wider">Nicht mehr aktiv</p>
+                    <p class="text-gray-400 leading-relaxed">
+                        Die Seite wird nicht mehr gepflegt. Der Download-Link wird nicht aktuell gehalten, und eingebundene Bilder werden mit der Zeit ungültig.
+                    </p>
+                </div>
             </div>
 
+            <button onclick="document.getElementById('archive-modal').style.display='none'" class="w-full bg-sky-500 hover:bg-sky-400 text-black font-black uppercase tracking-widest text-xs py-4 rounded-2xl transition-all cursor-pointer">
+                Verstanden & Schließen
+            </button>
         </div>
     </div>
 
