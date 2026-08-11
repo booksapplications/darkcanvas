@@ -11,57 +11,91 @@
         .feature-item { border-left: 3px solid #0ea5e9; padding-left: 1rem; }
     </style>
 </head>
-<body class="font-sans selection:bg-sky-500">
+<body class="font-sans selection:bg-sky-500 min-h-screen flex flex-col justify-between">
 
-    <nav class="max-w-5xl mx-auto px-6 py-8">
-        <a href="../index.html" class="text-sky-500 hover:text-sky-400 font-bold flex items-center gap-2 transition-all">
-            <span class="text-2xl">←</span> Zurück zur Übersicht
-        </a>
-    </nav>
-
-    <main class="max-w-5xl mx-auto px-6 pb-20">
-        
-        <section class="mb-12">
-            <div class="flex flex-wrap gap-3 mb-6">
-                <span class="bg-white text-black text-[10px] font-black px-3 py-1 rounded-md uppercase">Texture Pack</span>
-                <span class="bg-sky-500 text-white text-[10px] font-black px-3 py-1 rounded-md uppercase">Alpha v0.1</span>
-                <span class="bg-slate-800 text-gray-400 text-[10px] font-black px-3 py-1 rounded-md uppercase">1.21.1</span>
+    <!-- PROJEKT BEENDET POPUP -->
+    <div id="archive-banner" class="bg-sky-950/80 border-b border-sky-500/20 px-6 py-4 backdrop-blur-md sticky top-0 z-50 transition-all">
+        <div class="max-w-5xl mx-auto flex flex-col lg:flex-row items-start lg:items-center justify-between gap-4">
+            
+            <!-- Linke Seite: Hauptinfo -->
+            <div class="flex items-start gap-3">
+                <span class="bg-sky-500 text-black text-[10px] font-black px-2.5 py-1 rounded-md uppercase tracking-wider mt-0.5 shrink-0">Archiviert</span>
+                <p class="text-xs text-sky-200/90 leading-relaxed">
+                    Dieses Projekt wurde abgeschlossen und gehört zu meiner <a href="https://projectzwim.github.io/home/about" class="text-sky-400 font-bold underline underline-offset-2 hover:text-sky-300">Vergangenheit vor ProjectZWiM</a>.
+                </p>
             </div>
-            <h1 class="text-5xl md:text-7xl font-black italic mb-4 text-white">BLUE <span class="text-sky-500">EDITION</span></h1>
-            <p class="text-gray-400 text-xl max-w-2xl">Ein komplettes Farbumstyling für Minecraft 1.21.1 Alles in kühlen Blautönen.</p>
-        </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
-            <div class="md:col-span-2 h-[400px] rounded-[2rem] overflow-hidden border border-white/5">
-                <img src="https://via.placeholder.com/1200x800/0ea5e9/ffffff?text=Haupt-Screenshot" class="w-full h-full object-cover">
+            <!-- Rechte Seite: Zusätzliche Hinweise + Schließen-Button -->
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-4 w-full lg:w-auto">
+                <div class="bg-black/30 border border-white/5 px-4 py-2 rounded-xl text-[11px] text-gray-300 max-w-md">
+                    <span class="text-sky-400 font-bold">Hinweis:</span> Die Seite bleibt erreichbar, wird aber nicht mehr gepflegt. Der Download-Link kann veraltet sein, und eingebundene Bilder werden mit der Zeit ungültig.
+                </div>
+                
+                <button onclick="document.getElementById('archive-banner').style.display='none'" class="bg-sky-500/10 hover:bg-sky-500/20 border border-sky-500/30 text-sky-300 text-[10px] font-bold px-3 py-2 rounded-xl transition-all uppercase tracking-wider shrink-0 cursor-pointer">
+                    Verstanden ✕
+                </button>
             </div>
-            <div class="grid grid-rows-2 gap-4">
-                <div class="rounded-[2rem] overflow-hidden border border-white/5"><img src="https://via.placeholder.com/600x400/0ea5e9/ffffff?text=Detail+1" class="w-full h-full object-cover"></div>
-                <div class="rounded-[2rem] overflow-hidden border border-white/5"><img src="https://via.placeholder.com/600x400/0ea5e9/ffffff?text=Detail+2" class="w-full h-full object-cover"></div>
-            </div>
-        </section>
 
-        <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="md:col-span-2">
-                <div class="glass-panel p-8 rounded-[2.5rem]">
-                    <h3 class="text-2xl font-bold mb-4 text-sky-400">Über dieses Pack</h3>
-                    <p class="text-gray-300 leading-relaxed mb-6">Das Ziel ist es, Minecraft eine ästhetische Blaunote zu verleihen. Die Alpha v0.1 konzentriert sich auf das UI und erste Blöcke.</p>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="feature-item"><h4 class="font-bold">Custom UI</h4><p class="text-sm text-gray-400">Blaues Inventar.</p></div>
-                        <div class="feature-item"><h4 class="font-bold">Blue Accents</h4><p class="text-sm text-gray-400">Kühle Atmosphäre.</p></div>
+        </div>
+    </div>
+
+    <div>
+        <nav class="max-w-5xl mx-auto px-6 py-8">
+            <a href="../index.html" class="text-sky-500 hover:text-sky-400 font-bold flex items-center gap-2 transition-all">
+                <span class="text-2xl">←</span> Zurück zur Übersicht
+            </a>
+        </nav>
+
+        <main class="max-w-5xl mx-auto px-6 pb-20">
+            
+            <section class="mb-12">
+                <div class="flex flex-wrap gap-3 mb-6">
+                    <span class="bg-white text-black text-[10px] font-black px-3 py-1 rounded-md uppercase">Texture Pack</span>
+                    <span class="bg-sky-500 text-white text-[10px] font-black px-3 py-1 rounded-md uppercase">Alpha v0.1</span>
+                    <span class="bg-slate-800 text-gray-400 text-[10px] font-black px-3 py-1 rounded-md uppercase">1.21.1</span>
+                </div>
+                <h1 class="text-5xl md:text-7xl font-black italic mb-4 text-white">BLUE <span class="text-sky-500">EDITION</span></h1>
+                <p class="text-gray-400 text-xl max-w-2xl">Ein komplettes Farbumstyling für Minecraft 1.21.1 Alles in kühlen Blautönen.</p>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12">
+                <div class="md:col-span-2 h-[400px] rounded-[2rem] overflow-hidden border border-white/5">
+                    <img src="https://via.placeholder.com/1200x800/0ea5e9/ffffff?text=Haupt-Screenshot" class="w-full h-full object-cover">
+                </div>
+                <div class="grid grid-rows-2 gap-4">
+                    <div class="rounded-[2rem] overflow-hidden border border-white/5"><img src="https://via.placeholder.com/600x400/0ea5e9/ffffff?text=Detail+1" class="w-full h-full object-cover"></div>
+                    <div class="rounded-[2rem] overflow-hidden border border-white/5"><img src="https://via.placeholder.com/600x400/0ea5e9/ffffff?text=Detail+2" class="w-full h-full object-cover"></div>
+                </div>
+            </section>
+
+            <section class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="md:col-span-2">
+                    <div class="glass-panel p-8 rounded-[2.5rem]">
+                        <h3 class="text-2xl font-bold mb-4 text-sky-400">Über dieses Pack</h3>
+                        <p class="text-gray-300 leading-relaxed mb-6">Das Ziel ist es, Minecraft eine ästhetische Blaunote zu verleihen. Die Alpha v0.1 konzentriert sich auf das UI und erste Blöcke.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div class="feature-item"><h4 class="font-bold">Custom UI</h4><p class="text-sm text-gray-400">Blaues Inventar.</p></div>
+                            <div class="feature-item"><h4 class="font-bold">Blue Accents</h4><p class="text-sm text-gray-400">Kühle Atmosphäre.</p></div>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="space-y-6">
-                <div class="bg-sky-500 p-8 rounded-[2.5rem] shadow-xl text-black text-center">
-                    <h3 class="text-xl font-black uppercase mb-4">Download</h3>
-                    <a href="https://www.swisstransfer.com/d/6b8445dd-de4e-4a61-a957-9f57722b0182" target="_blank" class="block w-full bg-black text-white font-black py-4 rounded-2xl hover:scale-105 transition-transform uppercase text-xs">
-                        SwissTransfer
-                    </a>
+                <div class="space-y-6">
+                    <div class="bg-sky-500 p-8 rounded-[2.5rem] shadow-xl text-black text-center">
+                        <h3 class="text-xl font-black uppercase mb-4">Download</h3>
+                        <a href="https://www.swisstransfer.com/d/6b8445dd-de4e-4a61-a957-9f57722b0182" target="_blank" class="block w-full bg-black text-white font-black py-4 rounded-2xl hover:scale-105 transition-transform uppercase text-xs">
+                            SwissTransfer
+                        </a>
+                    </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
+
+    <footer class="max-w-5xl mx-auto w-full px-6 py-8 border-t border-white/5 text-[10px] text-zinc-600 uppercase tracking-widest flex justify-between">
+        <div>Blue Edition // Archiv</div>
+        <div>© 2026</div>
+    </footer>
+
 </body>
 </html>
